@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+   background-image: url(https://ak.jogurucdn.com/media/image/p15/media_gallery-2016-02-15-10-fotor_Seychelles_ded90f9fd50ee285410380fc3a7c907f.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+  
+}
+
+.content{
+    padding: 20px;
+    text-align: center;
+}
+
+.main-header{
+    background-color: #fcfcfc;
+    padding: 15px, 30px; /*15px na parte de cima e na parte de baixo, 30px para ambos os lados*/
+    box-shadow: 0, 2px, 5px rgba(0, 0, 0, 0.1);
+
+    /*Aprofundando no Flexbox*/
+
+    display: flex; /*transforma o header em um flex container (caixa pai) */
+    justify-content: center; 
+    align-items: center;
+    gap: 10px; /*espaçamento entre as informações da caixa*/
+}
+
+.logo{
+    font-size: 1.8rem;/*tamanho grande para o logo*/
+    font-weight: bold;/* largura da fonte*/
+    color: #333;
+    text-decoration: none;/*remove o sublinhado do link*/
+}
+
+.main-nav ul{
+    margin: 0; /*tira espaçamento externo*/
+    padding: 0; /*tira espaçamento interno*/
+    list-style-type: none;/* remove os pontos da lista*/
+
+    /*transformamos a <ul> em um flex container tambem! * Isso alinhará todos os seus filhos  (os<li>) lado a lado*/
+    display: flex;
+    gap: 25px;
+   
+}
+
+.main-nav a{
+    text-decoration: none;
+    color: #555;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 5px;/*espaço para a borda do :hover aparecer*/
+    transition: color 0.3s;
+    border-bottom-color: 0.3s; /*animação suave*/
+ 
+}
+.active{ /*estilo para o link ativo*/
+    background-color: #87e252;
+    text-decoration: none;
+    border-radius: 5px;
+    
+}
+
+/*A pseudo classe "hover" aplica estilos quando o mouse esta em cima do elemento. é essencial para dar feedback ao usuario*/
+
+.main-nav a:hover {
+     color: #007bff; /* Muda a cor do texto */
+     border-bottom: 2px solid #007bff; /* Adiciona uma borda inferior */
+
+}
+
+
